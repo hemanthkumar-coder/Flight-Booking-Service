@@ -1,0 +1,22 @@
+{
+  "name": "Booking_Service",
+  "version": "1.0.0",
+  "description": "Flight-Booking Service",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon src/index.js"
+  },
+  "author": "T Hemanth Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "concat-map": "^0.0.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-status-codes": "^2.2.0",
+    "mysql2": "^3.14.3",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3",
+    "winston": "^3.8.2"
+  }
+}
