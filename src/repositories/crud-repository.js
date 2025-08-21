@@ -33,9 +33,6 @@ class CrudRepository {
 
   async get(id) {
     const response = await this.model.findByPk(id);
-    if (!response) {
-      throw new AppError("Not Able to Find Resource", StatusCodes.NOT_FOUND);
-    }
     return response;
   }
 

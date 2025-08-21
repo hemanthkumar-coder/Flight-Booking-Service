@@ -19,6 +19,23 @@ async function SeatBookingController(req, res) {
   }
 }
 
+async function makePayment(req, res) {
+  try {
+    await BookingService.makePayment({
+      bookingId: req.body.bookingId,
+      userId: req.body.userId,
+      payingAmount: req.body.payingAmount,
+    });
+    SuccessResponse.message = "Booking Successfully Completed";
+    SuccessResponse.data = {};
+    res.status(SuccessResponse.StatusCode).json(SuccessResponse);
+  } catch (error) {
+    ErrorResponse.error = error;
+    res.status(error.StatusCode).json(ErrorResponse);
+  }
+}
+
 module.exports = {
   SeatBookingController,
+  makePayment,
 };
