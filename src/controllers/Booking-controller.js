@@ -28,7 +28,7 @@ async function makePayment(req, res) {
     });
     SuccessResponse.message = "Booking Successfully Completed";
     SuccessResponse.data = {};
-    res.status(SuccessResponse.StatusCode).json(SuccessResponse);
+    res.status(StatusCodes.OK).json(SuccessResponse);
   } catch (error) {
     ErrorResponse.error = error;
     res.status(error.StatusCode).json(ErrorResponse);
